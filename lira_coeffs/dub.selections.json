@@ -1,0 +1,10 @@
+{
+	"fileVersion": 1,
+	"versions": {
+		"cblas": "2.3.0",
+		"gl3n": "1.4.1",
+		"mir-algorithm": "3.10.82",
+		"mir-blas": "1.1.13",
+		"mir-core": "1.1.82"
+	}
+}

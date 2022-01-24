@@ -1,0 +1,7 @@
+name "lira_coeffs"
+description "LIRA Spherical Harmonics Coeffs"
+authors "Rinaldo Wander Montalvao"
+copyright "Copyright © 2021, Rinaldo Wander Montalvao"
+license "proprietary"
+
+dependency "gl3n" version="~>1.4.1"
