@@ -1,16 +1,6 @@
-// Copyright 2021 Astex Therapeutics Ltd.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//    http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+// Copyright (c) 2021, KU Leuven
+// Licensed under the Non-Profit Open Software License version 3.0.
+// SPDX-License-Identifier: NPOSL-3.0
 
 // Code libraries
 import geotools;
@@ -60,14 +50,15 @@ int main(string[] args)
 
 	if (cmds.helpWanted)
 	{
-		defaultGetoptPrinter("Lira 1.0 RID - Copyright (c) 2021 Rinaldo Wander Montalvão, PhD", cmds
+		defaultGetoptPrinter("Lira 1.0 Coeffs - Copyright (c) 2021 KU Leuven", cmds
 				.options);
 		return 0;
 	}
 
 	if (verbose)
 	{
-		writeln("Lira 1.0 RID - Copyright (c) 2021 Rinaldo Wander Montalvão, PhD");
+		writeln("        Lira 1.0 Coeffs by Rinaldo Wander Montalvão, PhD");
+		writeln("                Copyright (c) 2021 KU Leuven");
 		writeln("   Rega Institute for Medical Research - KU Leuven - Belgium");
 		writeln("Synthetic Biology Through Directed Evolution - The Pinheiro Lab\n");
 	}
