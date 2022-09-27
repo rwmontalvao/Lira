@@ -248,9 +248,11 @@ int main(string[] args)
 
 	if (compute_rmsd)
 	{
-		File csv_file = File("rmsd_data.csv", "w");
+		auto rmsd_file_name = in_file_name.split(".");
 
-		csv_file.writeln("radius,radius_sh,charge,charge_sh");
+		File csv_file = File(rmsd_file_name[0] ~ ".csv", "w");
+
+		csv_file.writeln("theta,phi,radius,radius_sh,charge,charge_sh");
 
 		double max_surface = surface_rtp[0].x;
 		double min_surface = surface_rtp[0].x;
@@ -263,8 +265,8 @@ int main(string[] args)
 		{
 
 			immutable double radius = surface_rtp[j].x;
-			// immutable double theta = surface_rtp[j].y;
-			// immutable double phi = surface_rtp[j].z;
+			immutable double theta = surface_rtp[j].y;
+			immutable double phi = surface_rtp[j].z;
 
 			if (radius > max_surface)
 				max_surface = radius;
@@ -293,7 +295,7 @@ int main(string[] args)
 			//writefln("%f - %f", radius, sum_surface);
 			total_surface += pow(radius - sum_surface, 2);
 			total_charge += pow(charge - sum_charge, 2);
-			csv_file.writefln("%f,%f,%f,%f", radius, sum_surface, charge, sum_charge);
+			csv_file.writefln("%f,%f,%f,%f,%f,%f",theta, phi, radius, sum_surface, charge, sum_charge);
 		}
 
 		csv_file.close();
